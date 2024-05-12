@@ -20,3 +20,14 @@ Content-Disposition: form-data; name="file"; filename="harbor.jpg"
 --WebAppBoundary--
 
 ###
+
+POST http://127.0.0.1:8000/pixelate/300/300
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="cat.jpg"
+
+< ./resources/cat.jpg
+--WebAppBoundary--
+
+###
